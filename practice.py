@@ -1,25 +1,57 @@
-n = int(input("enter nunber:"))   
+def greaTest(a , b , c):
+    if (a > b and a > c):
+        return a
+    elif(b > a and b > c):
+        return b
+    elif( c > b and c > a):
+        return c
+a = 14
+b = 25
+c = 37
 
-for i in range(1 , 11):
- print(f"{n}  X {i} = {n *i}")
+print(greaTest( a , b , c))
 
 
-# n = int(input("enter nunber:"))   while loop
-i = 0
-while  (i< 11):
- print(f"{n}  X {i} = {n *i}")
- i += 1
 
-# prime number  print
+# temperature
+# c/5 = (f- 32)/9    formula
 
-n = int(input('enter number'))
+def f_to_c (f):
+    return 5*(f-32)/9
+f = int(input("enter temperature in F:"))
+c = f_to_c(f)
+print(f"{round(c, 2)} degree °C")
 
-for i in range(2 , n):
-    if ( n % i) == 0:
-        
-     print('not prime')
-    break
-else:
-     print(" not prime")
 
-     
+'''
+sum(n) = 1 
+'''
+
+
+
+def sum(n):
+    if ( n == 1):
+        return 1
+    return sum ( n - 1) + n
+print(sum(5))
+
+def pattern(n):
+    if(n == 0):
+     return
+     print("*" * n)
+     pattern ( n - 1)
+
+pattern(3)    
+
+
+def inc_to_cm(inc):
+    return inc * 2.54
+n = int(input("enter a number:"))
+
+print(f"the value in cms is { inc_to_cm(n)}")
+
+def ml ( n ):
+    for i in range( 1, 11):
+        print(n*i)
+
+ml(5)        
